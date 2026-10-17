@@ -1,56 +1,21 @@
-import { Badge } from '@/components/common/Badge'
-import { Card } from '@/components/common/Card'
 import { Container } from '@/components/common/Container'
-import { SectionTitle } from '@/components/common/SectionTitle'
-import { skillGroups } from '@/data/skills'
-import { siteConfig } from '@/data/site'
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-20 py-14 sm:py-16">
-      <Container>
-        <SectionTitle
-          eyebrow="About"
-          title="About Me"
-          description="React and TypeScript developer focused on performance and clear UI architecture."
-        />
-
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <Card className="space-y-4">
-            <p className="text-sm leading-relaxed text-muted sm:text-base">
-              I&apos;m {siteConfig.name}, a {siteConfig.title}. I build
-              production React apps with attention to structure, state, and how
-              the UI behaves under real usage.
-            </p>
-            <p className="text-sm leading-relaxed text-muted sm:text-base">
-              At work I ship features around chat, calling, presence, and
-              messaging — including WebSockets, API integrations, reusable
-              components, and performance work like virtualization and lazy
-              loading.
-            </p>
-            <div className="flex flex-wrap gap-2 pt-2">
-              {['React', 'TypeScript', 'JavaScript', 'WebSockets'].map(
-                (item) => (
-                  <Badge key={item}>{item}</Badge>
-                ),
-              )}
-            </div>
-          </Card>
-
-          <div className="space-y-4">
-            {skillGroups.map((group) => (
-              <Card key={group.id} className="p-5">
-                <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
-                  {group.title}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <Badge key={skill}>{skill}</Badge>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
+    <section id="about" className="scroll-mt-24 py-16 sm:py-20">
+      <Container className="max-w-7xl">
+        <h2 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
+          About me.
+        </h2>
+        <div className="mt-8 border-l-[3px] border-highlight pl-5 sm:pl-6">
+          <p className="max-w-5xl text-base leading-relaxed text-muted sm:text-lg">
+            Hey <span aria-hidden="true">👋</span>, I am a Frontend Developer
+            with a passion for building clear and reliable user interfaces. I
+            love learning new things and I am always ready to take on new
+            challenges. I have experience working with HTML, CSS, JavaScript,
+            React, TypeScript, Tailwind CSS, WebSockets, and real-time features
+            like chat, presence, and messaging.
+          </p>
         </div>
       </Container>
     </section>

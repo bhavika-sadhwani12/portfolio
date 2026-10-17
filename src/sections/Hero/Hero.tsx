@@ -1,78 +1,64 @@
-import { ArrowRight, Download, Mail } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Download } from 'lucide-react'
 import { Button } from '@/components/common/Button'
 import { Container } from '@/components/common/Container'
-import { GitHubIcon, LinkedInIcon } from '@/components/ui/SocialIcons'
 import { siteConfig } from '@/data/site'
-import { socialLinks } from '@/data/socialLinks'
-
-const socialIcons = {
-  github: GitHubIcon,
-  linkedin: LinkedInIcon,
-} as const
 
 export function Hero() {
+  const firstName = siteConfig.name.split(' ')[0]
+
   return (
-    <section id="home" className="relative pt-24 pb-14 sm:pt-28 sm:pb-16">
-      <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="max-w-3xl"
-        >
-          <p className="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-accent-soft sm:text-sm">
-            Frontend Software Engineer
-          </p>
-          <h1 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            {siteConfig.name}
-          </h1>
-          <p className="mt-2 text-lg font-medium text-accent-soft sm:text-xl">
-            {siteConfig.title}
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-            {siteConfig.summary}
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button href="#projects" size="md">
-              View Projects
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Button>
-            <Button
-              href={siteConfig.resumePath}
-              size="md"
-              variant="secondary"
-              download={siteConfig.resumeFileName}
-            >
-              Download Resume
-              <Download className="h-4 w-4" aria-hidden="true" />
-            </Button>
-            <Button href="#contact" size="md" variant="ghost">
-              Contact Me
-              <Mail className="h-4 w-4" aria-hidden="true" />
-            </Button>
+    <section id="home" className="scroll-mt-20 pt-28 pb-16 sm:pt-32 sm:pb-24">
+      <Container className="max-w-7xl">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
+          <div>
+            <p className="text-2xl font-semibold text-foreground sm:text-[1.7rem]">
+              Hey, I&apos;m {firstName} <span aria-hidden="true">👋</span>
+            </p>
+            <h1 className="mt-3 text-6xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl">
+              <span className="text-highlight">Frontend</span>
+              <br />
+              <span className="text-foreground">Developer</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+              {siteConfig.summary}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button
+                href="#contact"
+                className="h-12 rounded-full bg-accent px-7 text-base font-medium text-white shadow-none hover:bg-[#6d28d9]"
+              >
+                Get In Touch
+              </Button>
+              <Button
+                href={siteConfig.resumePath}
+                variant="secondary"
+                download={siteConfig.resumeFileName}
+                className="h-12 rounded-full border-border-strong bg-transparent px-6 text-base font-medium text-foreground shadow-none hover:border-foreground/30 hover:bg-foreground/5"
+              >
+                <Download className="h-4 w-4" aria-hidden="true" />
+                Download CV
+              </Button>
+            </div>
           </div>
 
-          <div className="mt-5 flex items-center gap-2.5">
-            {socialLinks.map((link) => {
-              const Icon =
-                socialIcons[link.id as keyof typeof socialIcons] ?? GitHubIcon
-              return (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface text-muted transition-colors hover:border-accent/40 hover:text-accent-soft"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              )
-            })}
+          <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-[26rem]">
+            <div
+              className="absolute inset-8 rounded-full bg-accent/70 blur-3xl"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -inset-6 rounded-full bg-highlight/30 blur-3xl"
+              aria-hidden="true"
+            />
+            <div className="relative aspect-square overflow-hidden rounded-full bg-black">
+              <img
+                src="/hero-avatar.jpg"
+                alt=""
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   )

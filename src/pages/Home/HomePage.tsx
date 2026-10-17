@@ -17,15 +17,6 @@ export function HomePage() {
         Skip to main content
       </a>
 
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-grid"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-accent/20 blur-3xl"
-        aria-hidden="true"
-      />
-
       <Navbar />
 
       <main id="main-content">
