@@ -1,23 +1,24 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
-  --color-background: #070b14;
-  --color-surface: #0d1424;
-  --color-surface-elevated: #121a2e;
-  --color-border: #1e2a44;
-  --color-border-strong: #2a3a5c;
-  --color-foreground: #e8eefc;
-  --color-muted: #93a0bd;
-  --color-accent: #8b5cf6;
+  --color-background: #050014;
+  --color-surface: #0c0618;
+  --color-surface-elevated: #140a22;
+  --color-border: #2a2438;
+  --color-border-strong: #3f3654;
+  --color-foreground: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-accent: #7c3aed;
   --color-accent-soft: #a78bfa;
-  --color-accent-muted: rgba(139, 92, 246, 0.14);
+  --color-highlight: #c026d3;
+  --color-accent-muted: rgba(124, 58, 237, 0.16);
   --color-success: #34d399;
   --color-danger: #f87171;
 
-  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.18);
+  --shadow-glow: 0 0 80px rgba(168, 85, 247, 0.45);
   --radius-card: 1rem;
 }
 
@@ -31,6 +32,22 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    background-color: var(--color-background);
+  }
+
+  html[data-theme='light'] {
+    color-scheme: light;
+    --color-background: #f7f7fb;
+    --color-surface: #ffffff;
+    --color-surface-elevated: #f4f4f8;
+    --color-border: #e4e4e7;
+    --color-border-strong: #d4d4d8;
+    --color-foreground: #09090b;
+    --color-muted: #52525b;
+    --color-accent: #7c3aed;
+    --color-accent-soft: #6d28d9;
+    --color-highlight: #c026d3;
+    --color-accent-muted: rgba(124, 58, 237, 0.12);
   }
 
   @media (prefers-reduced-motion: reduce) {

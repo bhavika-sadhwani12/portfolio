@@ -36,13 +36,20 @@
       content="Frontend Software Engineer specializing in React, TypeScript, and scalable UI systems."
     />
     <meta name="twitter:image" content="/og-image.svg" />
-    <meta name="theme-color" content="#070b14" />
+    <meta name="theme-color" content="#050014" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.dataset.theme = 'light'
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
