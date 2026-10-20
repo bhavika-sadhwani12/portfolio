@@ -9,6 +9,7 @@ export const challenges: ChallengeItem[] = [
     difficulty: 'Easy',
     tags: ['React', 'Accessibility', 'State'],
     codeUrl: 'https://github.com/bhavika-sadhwani12/star-rating',
+    liveUrl: 'https://5jj86d.csb.app/',
   },
   {
     id: 'tic-tac-toe',
@@ -18,6 +19,7 @@ export const challenges: ChallengeItem[] = [
     difficulty: 'Easy',
     tags: ['React', 'Game Logic'],
     codeUrl: 'https://github.com/bhavika-sadhwani12',
+    liveUrl: 'https://vp9q5q.csb.app/',
   },
   {
     id: 'drag-and-drop',
