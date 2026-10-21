@@ -22,6 +22,16 @@ export const challenges: ChallengeItem[] = [
     liveUrl: 'https://vp9q5q.csb.app/',
   },
   {
+    id: 'calculator',
+    title: 'Calculator',
+    description:
+      'A calculator for basic arithmetic with keyboard input, clear, and a running display.',
+    difficulty: 'Easy',
+    tags: ['React', 'State', 'UI'],
+    codeUrl: 'https://github.com/bhavika-sadhwani12',
+    liveUrl: 'https://z8ygnd.csb.app/',
+  },
+  {
     id: 'drag-and-drop',
     title: 'Drag and Drop',
     description:
