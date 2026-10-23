@@ -39,6 +39,7 @@ export const challenges: ChallengeItem[] = [
     difficulty: 'Medium',
     tags: ['DnD', 'UX', 'Pointer Events'],
     codeUrl: 'https://github.com/bhavika-sadhwani12',
+    liveUrl: 'https://326mw4.csb.app/',
   },
   {
     id: 'progress-bar',
