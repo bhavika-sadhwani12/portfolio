@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import { Menu, Moon, Search, Sun, X } from 'lucide-react'
 import { navItems } from '@/constants/nav'
 import { challenges } from '@/data/challenges'
-import { projects } from '@/data/projects'
 import { siteConfig } from '@/data/site'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useScrollLock } from '@/hooks/useScrollLock'
@@ -24,14 +23,7 @@ const searchCatalog: SearchResult[] = [
     href: item.href,
     group: 'Pages',
   })),
-  { id: 'projects', label: 'Projects', href: '#projects', group: 'Pages' },
   { id: 'contact', label: 'Contact', href: '#contact', group: 'Pages' },
-  ...projects.map((project) => ({
-    id: project.id,
-    label: project.title,
-    href: '#projects',
-    group: 'Projects',
-  })),
   ...challenges.map((challenge) => ({
     id: challenge.id,
     label: challenge.title,

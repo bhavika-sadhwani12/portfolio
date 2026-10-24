@@ -5,7 +5,6 @@ import { Challenges } from '@/sections/Challenges'
 import { Contact } from '@/sections/Contact'
 import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
-import { Projects } from '@/sections/Projects'
 
 export function HomePage() {
   return (
@@ -23,7 +22,6 @@ export function HomePage() {
         <Hero />
         <About />
         <Experience />
-        <Projects />
         <Challenges />
         <Contact />
       </main>
